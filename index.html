@@ -62,9 +62,32 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif
 .sl:first-child{margin-top:0}
 .sep{height:1px;background:var(--bd);margin:14px 0}
 .mrow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
-.met{background:var(--bbg);border-radius:var(--r);padding:14px;text-align:center;border:1px solid rgba(37,99,235,0.15)}
-.mn{font-size:24px;font-weight:700;color:var(--itb);line-height:1}
-.ml{font-size:10px;color:var(--text3);margin-top:4px;font-weight:500}
+/* Kotak Statistik (Subtes, Soal, dll) */
+.met {
+  background: #FFCC00; /* Warna kuning cerah */
+  border-radius: var(--r);
+  padding: 15px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Angka di dalam kotak */
+.mn {
+  font-size: 26px;
+  font-weight: 800;
+  color: #000000; /* Warna hitam agar kontras dengan kuning */
+  line-height: 1;
+}
+
+/* Teks keterangan di bawah angka */
+.ml {
+  font-size: 10px;
+  color: #333333; /* Warna abu-abu gelap */
+  margin-top: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 .ir{display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--bd);font-size:12px}
 .ir:last-child{border-bottom:none}
 .ik{color:var(--text2);flex:1}.iv{color:var(--text);font-weight:600;text-align:right;font-size:11px}
