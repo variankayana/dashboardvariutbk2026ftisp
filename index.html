@@ -8,41 +8,20 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 :root{
-  --itb: #3b82f6; 
-  --itb2: #60a5fa;
-  --itb-bg: #1e293b;
-  --itb-t: #f1f5f9;
-  --bg: #0f172a;   /* Biru gelap pekat */
-  --bg2: #1e293b;  /* Abu-abu gelap untuk kotak/card */
-  --bg3: #334155;  /* Untuk hover atau border */
-  --text: #ffffff;  /* Putih bersih untuk judul utama */
-  --text2: #e2e8f0; /* Putih keabu-abuan untuk isi teks */
-  --text3: #94a3b8; /* Abu-abu terang untuk teks tambahan */
-  --bd: rgba(255,255,255,0.1);
-  --bd2: rgba(255,255,255,0.2);
-  --teal: #34d399; --tbg: rgba(52, 211, 153, 0.15); --tt: #a7f3d0;
-  --purple: #a78bfa; --pbg: rgba(167, 139, 250, 0.15); --pt: #ddd6fe;
-  --blue: #60a5fa; --bbg: rgba(96, 165, 250, 0.15); --bt: #dbeafe;
-  --amber: #fbbf24; --abg: rgba(251, 191, 36, 0.15); --at: #fef3c7;
-  --coral: #f87171; --cbg: rgba(248, 113, 113, 0.15); --ct2: #fee2e2;
-  --green: #4ade80; --gbg: rgba(74, 222, 128, 0.15); --gt: #dcfce7;
-  --r: 12px;
-  --rs: 8px;
+  --itb:#1E40AF;--itb2:#2563EB;--itb-bg:#EFF6FF;--itb-t:#1E3A8A;
+  --bg:#ffffff;--bg2:#F8FAFC;--bg3:#EFF6FF;
+  --text:#0F172A;--text2:#374151;--text3:#6B7280;
+  --bd:rgba(15,23,42,0.1);--bd2:rgba(15,23,42,0.2);
+  --teal:#059669;--tbg:#D1FAE5;--tt:#065F46;
+  --purple:#7C3AED;--pbg:#EDE9FE;--pt:#4C1D95;
+  --blue:#2563EB;--bbg:#DBEAFE;--bt:#1E40AF;
+  --amber:#D97706;--abg:#FEF3C7;--at:#92400E;
+  --coral:#DC2626;--cbg:#FEE2E2;--ct2:#991B1B;
+  --green:#16A34A;--gbg:#DCFCE7;--gt:#14532D;
+  --r:12px;--rs:8px;
 }
-@media(prefers-color-scheme:dark){:root{
-  --bg:#111827;--bg2:#1F2937;--bg3:#0F172A;
-  --text:#F9FAFB;--text2:#9CA3AF;--text3:#6B7280;
-  --bd:rgba(255,255,255,0.08);--bd2:rgba(255,255,255,0.16);
-  --itb-bg:#0c1a30;--itb-t:#93B4D9;
-  --tbg:#022C22;--tt:#6EE7B7;
-  --pbg:#1E0A3C;--pt:#C4B5FD;
-  --bbg:#0D1F47;--bt:#93C5FD;
-  --abg:#2D1A00;--at:#FCD34D;
-  --cbg:#3B0A0A;--ct2:#FCA5A5;
-  --gbg:#052E16;--gt:#86EFAC;
-}}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px;line-height:1.6}
+body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg3);color:var(--text);min-height:100vh;font-size:14px;line-height:1.6}
 .shell{padding:0 0 60px}
 /* HERO HEADER */
 .hero{background:linear-gradient(135deg,#0d2d5e 0%,#1a4a8a 60%,#1d5fab 100%);padding:24px 20px 0}
@@ -68,8 +47,8 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif
 /* CONTENT */
 .content{padding:20px 20px 0;max-width:980px;margin:0 auto}
 .sec{display:none}.sec.active{display:block}
-.card{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:14px 16px;box-shadow:0 2px 8px rgba(0,0,0,0.2)}
-.card:hover{box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.card{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:14px 16px;box-shadow:0 1px 4px rgba(30,64,175,0.06)}
+.card:hover{box-shadow:0 3px 10px rgba(30,64,175,0.1)}
 .cal{border-left:3px solid}
 .g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-bottom:10px}
 .g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:10px;margin-bottom:10px}
@@ -77,13 +56,13 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif
 .tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;margin-bottom:7px;letter-spacing:.03em}
 .ct{font-size:14px;font-weight:700;color:var(--text);margin-bottom:5px}
 .cb{font-size:12px;color:var(--text2);line-height:1.65}
-.tip{font-size:11px;color:var(--text2);background:rgba(255,255,255,0.05);border-radius:var(--rs);padding:7px 10px;margin-top:7px;line-height:1.5;border-left:2px solid rgba(96,165,250,0.4)}
+.tip{font-size:11px;color:var(--text2);background:var(--bg2);border-radius:var(--rs);padding:7px 10px;margin-top:7px;line-height:1.5;border-left:2px solid rgba(37,99,235,0.25)}
 .sl{font-size:10px;font-weight:700;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin:16px 0 8px;display:flex;align-items:center;gap:8px}
 .sl::after{content:'';flex:1;height:1px;background:var(--bd)}
 .sl:first-child{margin-top:0}
 .sep{height:1px;background:var(--bd);margin:14px 0}
 .mrow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
-.met{background:linear-gradient(135deg,var(--itb-bg),rgba(37,99,235,0.12));border-radius:var(--r);padding:14px;text-align:center;border:1px solid rgba(96,165,250,0.2)}
+.met{background:var(--bbg);border-radius:var(--r);padding:14px;text-align:center;border:1px solid rgba(37,99,235,0.15)}
 .mn{font-size:24px;font-weight:700;color:var(--itb);line-height:1}
 .ml{font-size:10px;color:var(--text3);margin-top:4px;font-weight:500}
 .ir{display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--bd);font-size:12px}
@@ -95,13 +74,13 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif
 .st{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
 .sd{font-size:12px;color:var(--text2);line-height:1.55}
 .rl{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:var(--rs);border:1px solid var(--bd);margin-bottom:5px;text-decoration:none;color:var(--text);font-size:12px;background:var(--bg);transition:all .12s}
-.rl:hover{background:var(--bg3);border-color:rgba(96,165,250,0.4);transform:translateX(3px)}
+.rl:hover{background:var(--bbg);border-color:var(--blue);transform:translateX(2px)}
 .rt{font-size:10px;color:var(--text3);margin-left:auto;white-space:nowrap}
 .tbl{width:100%;border-collapse:collapse;font-size:12px}
-.tbl th{padding:7px 8px;text-align:left;color:var(--text2);font-weight:700;border-bottom:1px solid rgba(96,165,250,0.2);font-size:11px;background:rgba(255,255,255,0.04)}
+.tbl th{padding:7px 8px;text-align:left;color:var(--bt);font-weight:700;border-bottom:2px solid var(--bd);font-size:11px;background:var(--bbg)}
 .tbl td{padding:6px 8px;color:var(--text2);border-bottom:1px solid var(--bd);vertical-align:top;line-height:1.4}
 .tbl tr:last-child td{border-bottom:none}
-.tbl tr:hover td{background:rgba(255,255,255,0.04)}
+.tbl tr:hover td{background:var(--bg3)}
 td.bad{color:var(--ct2)!important}td.good{color:var(--tt)!important}
 .al{border-radius:var(--rs);padding:10px 14px;font-size:12px;margin-bottom:11px;line-height:1.55;border:1px solid}
 .al-w{background:var(--abg);border-color:var(--amber);color:var(--at)}
@@ -120,12 +99,12 @@ td.bad{color:var(--ct2)!important}td.good{color:var(--tt)!important}
 .mma-m:hover{opacity:.85;transform:translateX(2px)}
 .mma-gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:6px;margin-bottom:10px}
 .mma-b{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 6px;border-radius:var(--rs);border:1px solid var(--bd);text-decoration:none;background:var(--bg);transition:all .12s}
-.mma-b:hover{background:var(--bg3);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.3)}
+.mma-b:hover{background:var(--bbg);transform:translateY(-2px);box-shadow:0 4px 10px rgba(30,64,175,0.12)}
 .mma-bl{font-size:13px;font-weight:700}.mma-bs{font-size:10px;color:var(--text2);text-align:center}
 /* platform */
 .plgr{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:12px}
 /* prodi */
-.pro-card{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:16px 18px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,0.2)}
+.pro-card{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:16px 18px;margin-bottom:10px;box-shadow:0 1px 4px rgba(30,64,175,0.06)}
 .pro-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px;flex-wrap:wrap}
 .pro-name{font-size:14px;font-weight:700;color:var(--text)}
 .kek-bar{height:8px;background:var(--bg2);border-radius:4px;overflow:hidden;margin:8px 0 4px}
@@ -138,7 +117,7 @@ td.bad{color:var(--ct2)!important}td.good{color:var(--tt)!important}
 /* berkas */
 .berk-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid var(--bd);font-size:12px}
 .berk-item:last-child{border-bottom:none}
-.bk-num{width:20px;height:20px;border-radius:50%;background:var(--itb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;margin-top:2px}
+.bk-num{width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;margin-top:2px}
 /* dress */
 .dr{display:flex;align-items:baseline;gap:6px;padding:5px 0;font-size:12px;color:var(--text2);border-bottom:1px solid var(--bd)}
 .dr:last-child{border-bottom:none}.dr::before{content:"·";color:var(--text3);flex-shrink:0}
@@ -178,7 +157,7 @@ footer{text-align:center;font-size:11px;color:var(--text3);margin-top:28px;paddi
       </div>
       <div class="hero-actions">
         <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px;">
-  <a class="rl" href="https://drive.google.com/drive/folders/1gpcDMj7gxHzIOfOMHdWZ6ojrytjIYvCm?usp=sharing" target="_blank" style="margin-bottom:0; background: var(--itb-bg); color: var(--itb-t); border-color: var(--itb);">
+  <a class="rl" href="https://drive.google.com/drive/folders/1gpcDMj7gxHzIOfOMHdWZ6ojrytjIYvCm?usp=sharing" target="_blank" style="margin-bottom:0; background: rgba(255,255,255,0.18); color:#fff; border-color:rgba(255,255,255,0.4);">
     <svg class="iw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
     File Umum UTBK
   </a>
@@ -460,6 +439,15 @@ footer{text-align:center;font-size:11px;color:var(--text3);margin-top:28px;paddi
       <span class="mpill f-sedang">Sikap & Tujuan Penulis</span>
       <span class="mpill f-sedikit">Makna Kata/Diksi Teknis</span>
     </div>
+    <div class="sl" style="margin-top:10px;font-size:9px">Materi teks saintek &amp; soshum (konteks wacana — BUKAN hafalan)</div>
+    <div class="mwrap" style="margin-top:4px">
+      <span class="mpill f-sedikit">Fisika Dasar (GLB, Newton, Energi, Listrik)</span>
+      <span class="mpill f-sedikit">Kimia Dasar (Atom, Ikatan, Reaksi, Larutan)</span>
+      <span class="mpill f-sedikit">Biologi Dasar (Sel, Metabolisme, Genetika, Ekologi)</span>
+      <span class="mpill f-sedikit">Sosiologi (Interaksi, Stratifikasi, Perubahan Sosial)</span>
+      <span class="mpill f-sedikit">Ekonomi (Pasar, Makro, Uang, Perdagangan)</span>
+      <span class="mpill f-sedikit">Geografi (Litosfer, Hidrosfer, Biosfer, SIG)</span>
+    </div>
   </div>
 
   <!-- LBE -->
@@ -476,6 +464,12 @@ footer{text-align:center;font-size:11px;color:var(--text3);margin-top:28px;paddi
       <span class="mpill f-sedang">Vocabulary in Context</span>
       <span class="mpill f-sedang">Author's Attitude/Tone</span>
       <span class="mpill f-sedikit">Pronoun Reference</span>
+    </div>
+    <div class="sl" style="margin-top:10px;font-size:9px">Materi teks saintek &amp; soshum dalam bahasa Inggris</div>
+    <div class="mwrap" style="margin-top:4px">
+      <span class="mpill f-sedikit">Scientific Texts (Physics, Chemistry, Biology)</span>
+      <span class="mpill f-sedikit">Social Science Texts (Economics, Sociology, Geography)</span>
+      <span class="mpill f-sedikit">Data Interpretation (graphs, tables in English)</span>
     </div>
   </div>
 
@@ -494,6 +488,7 @@ footer{text-align:center;font-size:11px;color:var(--text3);margin-top:28px;paddi
       <div class="ir"><span class="ik">PM</span><span class="iv" style="color:var(--tt)">✓ Mirip UTBK</span></div>
       <div class="ir"><span class="ik">PK</span><span class="iv" style="color:var(--at)">⚠ Terlalu susah</span></div>
       <div class="tip">Pilihan utama mayoritas subtes. PK lebih keras dari UTBK asli — bagus untuk latihan tekanan.</div>
+      <a class="rl" href="https://tryout.pahamify.com/home" target="_blank" style="margin-top:9px;color:var(--tt);border-color:var(--teal);background:var(--tbg);font-weight:600"><svg class="iw" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M5 7h4M7 5v4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Buka Pahamify Tryout<span class="rt">↗ web</span></a>
     </div>
     <div class="card">
       <div class="ct">SainsIn</div>
@@ -503,6 +498,7 @@ footer{text-align:center;font-size:11px;color:var(--text3);margin-top:28px;paddi
       <div class="ir"><span class="ik">PBM</span><span class="iv" style="color:var(--ct2)">✗ Kurang sesuai UTBK</span></div>
       <div class="ir"><span class="ik">LBE · LBI</span><span class="iv" style="color:var(--at)">~ Lumayan</span></div>
       <div class="tip">Gunakan untuk variasi soal, bukan acuan utama. PU asli UTBK premisnya berparagraf. PM UTBK normalnya 4–5 soal per materi.</div>
+      <a class="rl" href="https://sainsin.com/dashboard" target="_blank" style="margin-top:9px;font-weight:600"><svg class="iw" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M5 7h4M7 5v4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Buka SainsIn<span class="rt">↗ web</span></a>
     </div>
     <div class="card">
       <div class="ct">RG / GO Inten</div>
@@ -510,6 +506,7 @@ footer{text-align:center;font-size:11px;color:var(--text3);margin-top:28px;paddi
       <div class="ir"><span class="ik">PU · PBM · LBI · LBE</span><span class="iv" style="color:var(--tt)">✓ Cukup mirip</span></div>
       <div class="ir"><span class="ik">PK · PM</span><span class="iv" style="color:var(--at)">~ Lebih mudah dari UTBK</span></div>
       <div class="tip">TO Inten sangat mirip UTBK untuk PU, LBI, LBE. Beberapa soal TO Inten bahkan menggunakan soal dari MMA langsung.</div>
+      <a class="rl" href="https://app.ruangguru.com/ruanguji" target="_blank" style="margin-top:9px;color:var(--bt);border-color:var(--blue);background:var(--bbg);font-weight:600"><svg class="iw" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M5 7h4M7 5v4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Buka Ruangguru Uji<span class="rt">↗ web</span></a>
     </div>
     <div class="card" style="border-color:var(--purple)">
       <div class="ct">Alfaiz Mini Tryout</div>
@@ -517,6 +514,7 @@ footer{text-align:center;font-size:11px;color:var(--text3);margin-top:28px;paddi
       <div class="ir"><span class="ik">Format soal</span><span class="iv" style="color:var(--pt)">✓ Sangat mirip UTBK</span></div>
       <div class="ir"><span class="ik">Jenis</span><span class="iv" style="color:var(--pt)">Mini tryout saja</span></div>
       <div class="tip"><strong>Khusus mini tryout</strong> — bukan full TO. Soalnya sangat mirip UTBK asli. Bagus untuk latihan tipe soal spesifik dan membiasakan diri dengan format UTBK yang sebenarnya.</div>
+      <a class="rl" href="https://utbk.privatalfaiz.id/#!/tryout-ku" target="_blank" style="margin-top:9px;color:var(--pt);border-color:var(--purple);background:var(--pbg);font-weight:600"><svg class="iw" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M5 7h4M7 5v4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Buka Alfaiz Mini TO<span class="rt">↗ web · mini TO saja</span></a>
     </div>
   </div>
   <div class="sl">Rekomendasi kombinasi per subtes</div>
@@ -531,6 +529,18 @@ footer{text-align:center;font-size:11px;color:var(--text3);margin-top:28px;paddi
       <tr><td><strong>LBE</strong></td><td>Pahamify · Alfaiz Mini TO</td><td>MMA 2025 · SainsIn (variasi)</td></tr>
     </table>
   </div>
+  <div class="sl">Sumber belajar offline — buku fisik</div>
+  <div class="card" style="margin-bottom:10px">
+    <div class="cb" style="margin-bottom:10px">Buku fisik berikut sangat direkomendasikan sebagai pelengkap TO online:</div>
+    <div class="sr" style="padding-top:0">
+      <span class="sn b-p" style="font-size:13px">📖</span>
+      <div><div class="st">Buku Wangsit Om Jero</div><div class="sd">Tersedia untuk semua subtes: <strong>PK · PM · PU · LBI · LBE · PPU · PBM</strong>. Soal berkualitas tinggi, pola mirip UTBK, pembahasan mendalam. Beli per subtes sesuai prioritasmeu — PK, PM, LBI/LBE paling kritis.</div></div>
+    </div>
+    <div class="sr">
+      <span class="sn b-b" style="font-size:13px">📖</span>
+      <div><div class="st">Buku Master SNBT 2026</div><div class="sd">Referensi komprehensif yang mencakup ringkasan materi dan latihan soal UTBK-SNBT seluruh subtes. Bagus sebagai buku pegangan dan back-up latihan soal di luar platform digital.</div></div>
+    </div>
+  </div>
   <div class="sl">PDF TO tersebar — sumber soal gratis</div>
   <div class="card">
     <div class="cb" style="margin-bottom:9px">Banyak PDF soal TO dari RG, Pahamify, Inten, dll tersebar di Twitter/X dan komunitas SNBT. Sumber gratis yang sangat bermanfaat.</div>
@@ -541,11 +551,20 @@ footer{text-align:center;font-size:11px;color:var(--text3);margin-top:28px;paddi
 
 <!-- ═══ SUMBER BELAJAR ═══ -->
 <div id="sumber" class="sec">
-  <a class="rl" href="https://classroom.google.com/c/ODUxMDYyNDQ0NDIz" target="_blank" style="background: var(--itb); color: #fff; font-weight: 700; justify-content: center; padding: 14px; margin-bottom: 15px; border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-  <svg class="iw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-  AKSES CLASSROOM FTI 
-  <span class="rt" style="background: rgba(255,255,255,0.2); color: #fff;">G-Classroom</span>
-</a>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+    <a class="rl" href="https://classroom.google.com/c/ODUxMDYyNDQ0NDIz" target="_blank" style="background:var(--blue);color:#fff;font-weight:700;justify-content:center;padding:13px;border:none;box-shadow:0 3px 10px rgba(30,64,175,0.2);">
+      <svg class="iw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+      Akses Classroom FTI
+    </a>
+    <a class="rl" href="https://drive.google.com/drive/folders/1eIiwVnXQlt3IK12g_8__dk4zxbI_vpUN" target="_blank" style="background:var(--abg);color:var(--at);font-weight:700;justify-content:center;padding:13px;border:1px solid var(--amber);">
+      <svg class="id" viewBox="0 0 14 14" fill="none" style="opacity:1"><path d="M2.5 1.5h6l3 3v8h-9v-11z" stroke="currentColor" stroke-width="1.2"/><path d="M8.5 1.5v3h3" stroke="currentColor" stroke-width="1"/></svg>
+      Drive Soal TO Inten
+    </a>
+  </div>
+  <a class="rl" href="https://drive.google.com/drive/folders/1qD-wowgy2J_2PEn7xZhG_966G5xJMk0N?usp=sharing" target="_blank" style="margin-bottom:12px;background:var(--gbg);color:var(--gt);font-weight:600;border-color:var(--green);justify-content:center;padding:10px 14px;">
+    <svg class="iw" viewBox="0 0 14 14" fill="none"><path d="M2.5 1.5h6l3 3v8h-9v-11z" stroke="currentColor" stroke-width="1.2"/></svg>
+    Soal OSN — teks saintek/soshum (berguna untuk latihan LBI) <span class="rt">Google Drive ↗</span>
+  </a>
   <div class="rg">
     <div class="rg-h">🍜 MMA 2025 — Soal Asli SNBT per Subtes</div>
     <div class="cb" style="margin-bottom:10px;font-size:12px">Kumpulan soal asli dari berbagai sesi SNBT 2025, lengkap dengan kunci jawaban & pembahasan. Patokan terbaik untuk menilai seberapa mirip platform TO-mu dengan UTBK asli. ⚠ Jawaban dari berbagai sumber — verifikasi jika ragu.</div>
